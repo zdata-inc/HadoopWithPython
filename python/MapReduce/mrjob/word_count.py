@@ -1,6 +1,6 @@
 from mrjob.job import MRJob
 
-class MRWordFreqCount(MRJob):
+class MRWordCount(MRJob):
 
    def mapper(self, _, line):
       for word in line.split():
@@ -10,4 +10,4 @@ class MRWordFreqCount(MRJob):
       yield(word, sum(counts))
 
 if __name__ == '__main__':
-   MRWordFreqCount.run()
+   MRWordCount.run()
