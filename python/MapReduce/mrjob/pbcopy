@@ -1,0 +1,37 @@
+snakebite [general options] cmd [arguments]
+general options:
+  -D --debug                     Show debug information
+  -V --version                   Hadoop protocol version (default:9)
+  -h --help                      show help
+  -j --json                      JSON output
+  -n --namenode                  namenode host
+  -p --port                      namenode RPC port (default: 8020)
+  -v --ver                       Display snakebite version
+
+commands:
+  cat [paths]                    copy source paths to stdout
+  chgrp <grp> [paths]            change group
+  chmod <mode> [paths]           change file mode (octal)
+  chown <owner:grp> [paths]      change owner
+  copyToLocal [paths] dst        copy paths to local file system destination
+  count [paths]                  display stats for paths
+  df                             display fs stats
+  du [paths]                     display disk usage statistics
+  get file dst                   copy files to local file system destination
+  getmerge dir dst               concatenates files in source dir into destination local file
+  ls [paths]                     list a path
+  mkdir [paths]                  create directories
+  mkdirp [paths]                 create directories and their parents
+  mv [paths] dst                 move paths to destination
+  rm [paths]                     remove paths
+  rmdir [dirs]                   delete a directory
+  serverdefaults                 show server information
+  setrep <rep> [paths]           set replication factor
+  stat [paths]                   stat information
+  tail path                      display last kilobyte of the file to stdout
+  test path                      test a path
+  text path [paths]              output file in text format
+  touchz [paths]                 creates a file of zero length
+  usage <cmd>                    show cmd usage
+
+to see command-specific options use: snakebite [cmd] --help
