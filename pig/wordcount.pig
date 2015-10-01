@@ -1,5 +1,8 @@
+%default INPUT '/user/hduser/input/input.txt';
+%default OUTPUT '/user/hduser/output';
+
 -- Load the data from the file system into the relation records
-records = LOAD '../resources/input.txt';
+records = LOAD '$INPUT';
 
 -- Split each line of text and eliminate nesting
 terms = FOREACH records GENERATE FLATTEN(TOKENIZE((chararray) $0)) AS word;
@@ -11,4 +14,4 @@ grouped_terms = GROUP terms BY word;
 word_counts = FOREACH grouped_terms GENERATE COUNT(terms), group;
 
 -- Store the result
-STORE word_counts INTO '/tmp/pig_wordcount';
+STORE word_counts INTO '$OUTPUT';

@@ -1,5 +1,5 @@
-[pig]
-home: /usr/local/Cellar/pig/default
-
 [hadoop]
-streaming-jar: /usr/local/Cellar/hadoop/2.7.1/libexec/share/hadoop/tools/lib/hadoop-streaming-2.7.1.jar
+streaming-jar: /usr/lib/hadoop-xyz/hadoop-streaming-xyz-123.jar
+
+[pig]
+home: /usr/lib/pig

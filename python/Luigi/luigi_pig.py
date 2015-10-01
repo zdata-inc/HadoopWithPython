@@ -17,7 +17,7 @@ class WordCount(luigi.contrib.pig.PigJobTask):
    """
    input_file = luigi.Parameter()
    output_file = luigi.Parameter()
-   script_path = luigi.Parameter(default='pig/wordcount.pig')
+   script_path = luigi.Parameter(default='../../pig/wordcount.pig')
 
    def requires(self):
       """
